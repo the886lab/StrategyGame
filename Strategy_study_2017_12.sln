@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy_study_2017_12", "Strategy_study_2017_12.csproj", "{CE591AE3-200E-ACEB-8647-9F6D24344517}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy_study_2017_12.Editor", "Strategy_study_2017_12.Editor.csproj", "{1319729A-E5E9-9F89-7D5C-C7C29E71E3B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE591AE3-200E-ACEB-8647-9F6D24344517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE591AE3-200E-ACEB-8647-9F6D24344517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE591AE3-200E-ACEB-8647-9F6D24344517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE591AE3-200E-ACEB-8647-9F6D24344517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1319729A-E5E9-9F89-7D5C-C7C29E71E3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1319729A-E5E9-9F89-7D5C-C7C29E71E3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1319729A-E5E9-9F89-7D5C-C7C29E71E3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1319729A-E5E9-9F89-7D5C-C7C29E71E3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
