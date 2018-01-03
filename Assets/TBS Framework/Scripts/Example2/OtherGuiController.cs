@@ -75,9 +75,9 @@ class OtherGuiController : MonoBehaviour
     }
     private void OnUnitHighlighted(object sender, EventArgs e)
     {
-        var attack = (sender as Unit).AttackFactor;
-        var defence = (sender as Unit).DefenceFactor;
-        var range = (sender as Unit).AttackRange;
+        var attack = (sender as Unit).FirePowerFactor;
+        var defence = (sender as Unit).ArmorFactor;
+        var range = (sender as Unit).FireRange;
 
         float hpScale = (float)((float)(sender as Unit).HitPoints / (float)(sender as Unit).TotalHitPoints);
 
