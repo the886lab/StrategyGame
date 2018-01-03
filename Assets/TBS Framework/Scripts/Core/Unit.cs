@@ -69,9 +69,17 @@ public abstract class Unit : MonoBehaviour
     public Cell Cell { get; set; }
 
     public int HitPoints;
-    public int AttackRange;
-    public int AttackFactor;
-    public int DefenceFactor;
+    public int FireRange;
+    public int FirePowerFactor;
+    public int ArmorFactor;
+	///追加分
+
+	public int ActualFactor;
+	public int AvoidanceFactor;
+	public int AntiAirFactor;
+	public int ScoutingFactor;
+
+	/// 
     /// <summary>
     /// Determines how far on the grid the unit can move.
     /// </summary>
@@ -186,7 +194,7 @@ public abstract class Unit : MonoBehaviour
     /// </summary>
     public virtual bool IsUnitAttackable(Unit other, Cell sourceCell)
     {
-        if (sourceCell.GetDistance(other.Cell) <= AttackRange)
+        if (sourceCell.GetDistance(other.Cell) <= FireRange)
             return true;
 
         return false;
@@ -205,7 +213,7 @@ public abstract class Unit : MonoBehaviour
 
         MarkAsAttacking(other);
         ActionPoints--;
-        other.Defend(this, AttackFactor);
+        other.Defend(this, FirePowerFactor);
 
         if (ActionPoints == 0)
         {
@@ -221,7 +229,7 @@ public abstract class Unit : MonoBehaviour
         MarkAsDefending(other);
         //Damage is calculated by subtracting attack factor of attacker and defence factor of defender. 
         //If result is below 1, it is set to 1. This behaviour can be overridden in derived classes.
-        HitPoints -= Mathf.Clamp(damage - DefenceFactor, 1, damage);  
+        HitPoints -= Mathf.Clamp(damage - ArmorFactor, 1, damage);  
         if (UnitAttacked != null)
             UnitAttacked.Invoke(this, new AttackEventArgs(other, this, damage));
 
